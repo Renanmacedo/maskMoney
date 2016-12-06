@@ -1,17 +1,23 @@
 /*
  Built 1.0.0
 */
+'use strict';
+
 (function(d){
  var _value;
- var _test;
- var _regExp	=	/^\d{3}/g;
+ var _test = "";
+ var _arr = [];
+ var _length = 0;
  var mask = function(inputValue){
- 	_value = document.getElementById(inputValue).value;
- 	_test = _regExp.test(_value);
- 	if(_test == false) return _test;
- 	var result = _regExp.exec(_value);
-
- 	var _f = document.getElementById(inputValue).innerHTML = result;
+  _value = document.getElementById(inputValue).value;
+  _arr = _value.split("");
+  if(_value._length > _length){
+  	_length = _value.length;	
+  	for (var i = Things.length - 1; i >= 0; i--) {
+  		_test += _arr[i];
+  	}
+  }
+ 	
  }
   d.mask = mask;	
 })(document);
