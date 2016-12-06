@@ -9,12 +9,12 @@
  var _arr = [];
  var _length = 0;
  // somente números
- var regEx = /\d/g;
+ const regEx = /^(\d{1,3}\.?)+,?(\d{2})?$/;
  var mask = function(inputValue){
  
   _value = document.getElementById(inputValue).value;
  	// valida se somente numeros estão sendo digitados
- 	if(regEx.test(_value) == false){
+ 	if(regEx.exec(_value) === null){
  		document.getElementById(inputValue).value = "";
  		return ;
  	}
@@ -24,7 +24,7 @@
   		for (var i = 0;i < _length; i++) {
   			_test += _arr[i];
   		}
- 	var regEx2 = /^?\d[,.]\$/g
  }
+
   d.mask = mask;	
 })(document);
