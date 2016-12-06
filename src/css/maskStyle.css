@@ -54,5 +54,7 @@ input[type="text"]{
 }
 .icon i {
 	color: #545454;
-
+}
+.fork-mask{
+	float: right;
 }
