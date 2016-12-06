@@ -13,18 +13,18 @@
  var mask = function(inputValue){
  
   _value = document.getElementById(inputValue).value;
- 	// valida se somente numeros estão sendo digitados
- 	if(regEx.exec(_value) === null){
- 		document.getElementById(inputValue).value = "";
- 		return ;
- 	}
- 		// cria o array com os numeros
- 	 _arr = _value.split("");
- 	 _length = _arr.length;
-  		for (var i = 0;i < _length; i++) {
-  			_test += _arr[i];
-  		}
+     // valida se somente numeros estão sendo digitados
+     if(regEx.exec(_value) === null){
+         document.getElementById(inputValue).value = "";
+         return ;
+     }
+         // cria o array com os numeros
+      _arr = _value.split("");
+      _length = _arr.length;
+          for (var i = 0;i < _length; i++) {
+              _test += _arr[i];
+          }
  }
 
-  d.mask = mask;	
+  d.mask = mask;    
 })(document);
