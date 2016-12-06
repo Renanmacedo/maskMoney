@@ -8,16 +8,23 @@
  var _test = "";
  var _arr = [];
  var _length = 0;
+ // somente números
+ var regEx = /\d/g;
  var mask = function(inputValue){
+ 
   _value = document.getElementById(inputValue).value;
-  _arr = _value.split("");
-  if(_value._length > _length){
-  	_length = _value.length;	
-  	for (var i = Things.length - 1; i >= 0; i--) {
-  		_test += _arr[i];
-  	}
-  }
- 	
+ 	// valida se somente numeros estão sendo digitados
+ 	if(regEx.test(_value) == false){
+ 		document.getElementById(inputValue).value = "";
+ 		return ;
+ 	}
+ 		// cria o array com os numeros
+ 	 _arr = _value.split("");
+ 	 _length = _arr.length;
+  		for (var i = 0;i < _length; i++) {
+  			_test += _arr[i];
+  		}
+ 	var regEx2 = /^?\d[,.]\$/g
  }
   d.mask = mask;	
 })(document);
